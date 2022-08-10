@@ -6,22 +6,22 @@
 
 # Time O(n), space O(n)
 class Solution:
-  def __is_divisible_by(self, n, byN):
-    return n % byN == 0
-  
+  def __is_divisible(self, n, divisor):
+    return n % divisor == 0
+
   def fizz_buzz(self, n):
     result = []
-
+    
     for i in range(1, n + 1):
-      if self.__is_divisible_by(i, 3) and self.__is_divisible_by(i, 5):
+      if self.__is_divisible(i, 3) and self.__is_divisible(i, 5):
         result.append('FizzBuzz')
-      elif self.__is_divisible_by(i, 3):
+      elif self.__is_divisible(i, 3):
         result.append('Fizz')
-      elif self.__is_divisible_by(i, 5):
+      elif self.__is_divisible(i, 5):
         result.append('Buzz')
       else:
         result.append(str(i))
-
+    
     return result
 
 n = 6

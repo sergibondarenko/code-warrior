@@ -1,18 +1,14 @@
 # Given a list of sorted numbers remove all duplicates in-place.
 
 # Time O(n), space O(1)
-
 class Solution:
-  def removeDuplicates(self, list):
-    if not len(list):
-      return 0
-
+  def removeDuplicates(self, nums):
     i = 0
 
-    for j in range(1, len(list)):
-      if (list[i] != list[j]):
+    for j in range(1, len(nums)):
+      if nums[i] != nums[j]:
         i += 1
-        list[i] = list[j]
+        nums[i] = nums[j]
 
     return i + 1
 
